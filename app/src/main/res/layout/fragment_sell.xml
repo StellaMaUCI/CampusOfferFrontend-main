@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightPink"
+        tools:context=".ui.fragments.ShopFragment">
+
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Title"
+            android:background="@color/lightGray"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="300dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/lightGray"
+            android:ems="10"
+            android:gravity="top|start"
+            android:hint="Description"
+            android:inputType="text"
+            android:lines="8"
+            android:maxLines="8"
+            android:minLines="5"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPrice" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:text="Submit a New"
+            app:layout_constraintBottom_toTopOf="@+id/listSaleButton"
+            app:layout_constraintEnd_toEndOf="@+id/listSaleButton" />
+
+        <Button
+            android:id="@+id/listSaleButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="My Sale List"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:ems="10"
+            android:hint="Price"
+            android:background="@color/lightGray"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/editDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTitle" />
+
+        <Button
+            android:id="@+id/addImageButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:text="Add Images"
+            app:layout_constraintBottom_toTopOf="@+id/listSaleButton"
+            app:layout_constraintStart_toStartOf="@+id/listSaleButton" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="300dp"
+            android:layout_height="224dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDescription">
+
+            <LinearLayout
+                android:id="@+id/imagesLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
